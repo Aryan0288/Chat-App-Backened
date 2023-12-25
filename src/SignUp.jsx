@@ -31,7 +31,7 @@ const SignUp = ({ setIsLoggedIn }) => {
       console.log("api fetching..");
       const url = isLoginRegister === 'register' ? 'register' : 'login';
       console.log("check url " + url);
-      const { data } = await axios.post('https://mern-chat-app-api-g3qd.onrender.com/'+url, { username, password, email });
+      const { data } = await axios.post(url, { username, password, email });
 
       setLoggedInUsername(username);
       setId(data.id);
